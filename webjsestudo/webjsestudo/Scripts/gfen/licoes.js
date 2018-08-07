@@ -45,4 +45,48 @@ tem o tipo cors (há cors readers) restringe os cabeçalhos que pode ser visuali
 temo o tipo opaque - não será possivel ler os dados retornados ou verficar o status do request (request diferente origem)
 Parametrizar o que pode receber -> same-origin cors  Aqui tem o conceito de preflight check ??? no cors
 cross-origin resource sharing protocol (CORS)
+
+Using Fetch 
+
+Fetch API fornece um javascript Interface para acessar e manipular partes do HTTP pipeline, como requisicoes e responses. Fornecedor de um metodo global fetch 
+Service Workers? 
+CORS
+Promisse returned resolver errors status 404 ou 500 . rejeitar por falha de rede ou algo prevenir de terminar o request 
+Nao irá enviar cookies do servidor por padrão. pode modificar init option ( questões de autenticacao)
+O que é JSON.stringify?
+
+
+
+
+
+
+
+
+
+
+
+
+function status(response) {
+  if (response.status >= 200 && response.status < 300) {
+    return Promise.resolve(response)
+  } else {
+    return Promise.reject(new Error(response.statusText))
+  }
+}
+
+function json(response) {
+  return response.json()
+}
+
+fetch('users.json')
+  .then(status)
+  .then(json)
+  .then(function(data) {
+    console.log('Request succeeded with JSON response', data);
+  }).catch(function(error) {
+    console.log('Request failed', error);
+  });
+
+
+
   */
