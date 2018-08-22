@@ -1,0 +1,7 @@
+﻿p{
+    font:14px/20px "Helvetica Neue", arial, sans-serif;
+}
+
+body p:first-of-type{
+    font-style:italic;
+}
