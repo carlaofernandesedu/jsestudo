@@ -1,7 +1,7 @@
 ﻿p{
     font:14px/20px "Helvetica Neue", arial, sans-serif;
 }
-
+/*pseudo classe acrescentar ao seletor um recurso para acessar estados de elementos*/
 body p:first-of-type{
     font-style:italic;
 }

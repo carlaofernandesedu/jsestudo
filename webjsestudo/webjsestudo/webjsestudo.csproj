@@ -156,7 +156,10 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="seriecss\index.html" />
     <Content Include="seriecss\pseudoclasses.html" />
-    <Content Include="seriecss\stylesheet01.css" />
+    <Content Include="seriecss\pseudoclassesform.html" />
+    <Content Include="seriecss\stylesheetinput.css" />
+    <Content Include="seriecss\stylesheetnthoftype.css" />
+    <Content Include="seriecss\stylesheetfirstoftype.css" />
     <Content Include="seriecss\stylesheet.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

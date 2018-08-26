@@ -1,0 +1,11 @@
+﻿p{
+    font:14px/20px "Helvetica Neue", arial, sans-serif;
+}
+/*pseudo classe acrescentar ao seletor um recurso para acessar estados de elementos*/
+body p:nth-of-type(2n+1){
+    background-color:blue;
+}
+
+tr:nth-of-type(2n){
+    background-color:red;
+}

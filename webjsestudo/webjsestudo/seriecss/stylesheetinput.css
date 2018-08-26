@@ -1,0 +1,27 @@
+﻿p{
+    font:14px/20px "Helvetica Neue", arial, sans-serif;
+}
+
+input:disabled{
+    border:1px solid #222;
+    background:#eee;
+    cursor:not-allowed;
+}
+
+input:read-only{
+    border:1px solid #ff0000;
+    background:#ffd800;
+    cursor:copy;
+}
+
+input:checked + label{
+    color:red;
+}
+
+form[name='frmcampos'] input:not(required){
+    border:1px solid #222;
+}
+
+form[name='frmcampos'] input:required {
+    border: 1px solid #ff0000;
+}
