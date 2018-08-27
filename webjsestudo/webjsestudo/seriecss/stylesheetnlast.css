@@ -1,0 +1,16 @@
+﻿p{
+    font:14px/20px "Helvetica Neue", arial, sans-serif;
+}
+/*pseudo classe acrescentar ao seletor um recurso para acessar estados de elementos*/
+table[name='last01'] tr:nth-last-child(odd){
+    background:#ff6a00
+}
+/* seleciona os tres ultimos  */
+table[name='last02'] tr:nth-last-child(-n+3) {
+    background: #ff6a00
+}
+
+/* seleciona o penultimo  */
+table[name='last03'] tr:nth-last-child(2) {
+    background: #ff6a00
+}
