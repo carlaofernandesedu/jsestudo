@@ -168,6 +168,7 @@
     <Content Include="seriecss\pseudoclasses.html" />
     <Content Include="seriecss\pseudoclasseslast.html" />
     <Content Include="seriecss\pseudoclassesform.html" />
+    <Content Include="seriecss\stylesheetflex.css" />
     <Content Include="seriecss\stylesheetinput.css" />
     <Content Include="seriecss\stylesheetnlast.css" />
     <Content Include="seriecss\stylesheetnthoftype.css" />
