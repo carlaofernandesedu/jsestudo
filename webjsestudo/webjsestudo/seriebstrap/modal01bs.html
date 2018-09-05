@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Aula Modal Boostrap</title>
+</head>
+<body>
+    <button class="btn-primary" data-target="#modalbasico" data-toggle="modal">Abrir Modal Inicial</button>
+    <hr />
+    <button class="btn-primary" id="btnexibirmodal">Abrir Modal Por Jquery</button>
+    <hr />  
+    <button class="btn-primary" id="btnexibirform" data-target="#modalform" data-toggle="modal">Abrir Form</button>
+    <div class="modal" id="modalbasico">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Titulo do Modal</h4>
+                </div>
+                <div class="modal-body">
+                    Conteudo do Modal
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modaljquery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Titulo Modal Jquery</h4>                    
+                </div>
+                <div class="modal-body">
+                    Conteudo do Modal Jquery 
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-success" id="btnexibiralerta">Exibir Alerta</button>
+                    <button class="btn-danger" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalform">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-success" id="btnexibiremail" data-dismiss="modal">Exibir o email</button>
+                    <button class="btn-danger"  data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnexibiralerta").off("click");
+            $("#btnexibiralerta").on("click", function () {
+                alert("Exibido o alerta");
+                $("#modaljquery").modal('hide');
+            });
+            $("#btnexibirmodal").off("click");
+            $("#btnexibirmodal").on("click", function () {
+                $("#modaljquery").modal();
+            });
+            $("#btnexibiremail").off("click");
+            $("#btnexibiremail").on("click", function () {
+                var email = $("#email").val();
+                alert("Exibido o email" + email);
+            });
+
+        });
+    </script>
+</body>
+</html>
